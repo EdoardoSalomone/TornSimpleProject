@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>TornSimpleTime</title>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="js/TornTime.js"></script>
+    <div class="container bg-success bg-opacity-75 font-monospace border border-2 border-black">
+        <div class="row mb-5 align-items-center justify-content-center">
+            <div class="col-12 text-center">
+                <h1>Torn InfoPlayer</h1>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-6 justify-content-center align-items-center">
+                <input type="text" class="form-control bg-success-subtle" id="userIdInsert" placeholder="UserId">
+            </div>
+            <div class="col-6 justify-content-center align-items-center">
+                <input type="text" class="form-control bg-success-subtle" id="apiKeySlot" placeholder="API Key here">
+            </div>
+        </div>
+        <div class="row mb-5 justify-content-center align-items-center">
+            <div class="col-1 justify-content-center align-items-center">
+                <button type="button" class="bg-black bg-opacity-75 text-light" disabled="disabled" id="abilitaChiamata" onclick="chiamaApi(componiUrl())">
+                    Chiama l'api
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container font-monospace">
+        <div class="row mb-5 align-items-center justify-content-center">
+            <div class="col-12 align-items-center justify-content-center">
+                <div class="card border border-black border-2 bg-warning bg-opacity-50">
+                    <div class="card-body">
+                        <h4 class="card-title text-center" id="nomePlayer">Nome Player</h4>
+                        <h5 class="card-subtitle mb-2 text-center text-muted" id="livelloPlayer">Livello</h5>
+                        <h6 class="card-subtitle text-center mb-2" id="livelloPlayerNumero">[0]</h6>
+                        <div class="row align-items-center justify-content-center text-center bg-light">
+                        <div class="col-3 border border-black border-2" id="stat1Titolo">
+                            <p>Last Action</p>
+                            <p id="stat1Valore"> stat1[0] </p>
+                        </div>
+                        <div class="col-3 border border-black border-2" id="stat2Titolo">
+                            <p>Faction Name</p>
+                            <p id="stat2Valore"> stat2[0] </p>
+                        </div>
+                        <div class="col-3 border border-black border-2" id="stat3Titolo">
+                            <p>Job</p>
+                            <p id="stat3Valore"> stat3[0] </p>
+                        </div>
+                        <div class="col-3 border border-black border-2" id="stat4Titolo">
+                            <p>Property</p>
+                            <p  id="stat4Valore"> stat4[0] </p>
+                        </div>
+                        </div>
+                        <p class="card-text text-center" id="statusTitolo">STATUS</p>
+                        <p class="card-text text-center" id="statusContenuto">StatusContenuto</p>
+                        <a class="card-link" id="infoGenerali" href="generalInfo.html">Vai alle info generali complete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
